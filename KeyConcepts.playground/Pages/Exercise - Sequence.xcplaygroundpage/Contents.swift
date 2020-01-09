@@ -36,31 +36,36 @@ let lightRed = Color(hue: 4, saturation: 78, brightness: 92, alpha: 100)
 // You can turn off the fill or border if desired.
 
 
-canvas.drawText(message: "the jesus", at: Point(x:10, y:450), size: 60, kerning: 0.0)
-
-
 // No border, has a fill
 canvas.drawShapesWithBorders = false
 canvas.drawShapesWithFill = true
 
+//colour the full background grey
 canvas.fillColor = Color(hue: 210, saturation: 1, brightness: 82, alpha: 100)
-
 canvas.drawRectangle(at: Point(x:0, y:0), width: 400, height: 600)
-
-
 
 // Has a border, no fill
 canvas.drawShapesWithBorders = true
 canvas.drawShapesWithFill = false
 
+//draw red ring
 canvas.borderColor = Color(hue: 4, saturation: 78, brightness: 92, alpha: 100)
 canvas.defaultBorderWidth = 100
 canvas.drawEllipse(at: Point(x: 200, y: 200), width: 275, height: 275)
 
+//draw blue ring
 canvas.borderColor = Color(hue: 205, saturation: 74, brightness: 77, alpha: 75)
 canvas.defaultBorderWidth = 100
 canvas.drawEllipse(at: Point(x: 350, y: 200), width: 275, height: 275)
 
+
+//Place the text
+canvas.textColor = Color.black
+canvas.drawText(message: "the jesus", at: Point(x:10, y:450), size: 40, kerning: 0.0)
+
+canvas.drawText(message: "and mary chain", at: Point(x:10, y:405), size: 40, kerning: 0.0)
+
+canvas.drawText(message: "the jesus", at: Point(x:10, y:450), size: 40, kerning: 0.0)
 /*:
  ## Template code
  The code below is necessary to see results in the Assistant Editor at right. Please do not remove.
